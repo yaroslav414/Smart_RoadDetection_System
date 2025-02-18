@@ -1,9 +1,0 @@
-<resources>
-    <string name="app_name">Smart Pothole Detector</string>
-    <string-array name="spinner_items">
-        <item>Menu</item>
-        <item>Home</item>
-        <item>Contact us</item>
-        <item>About us</item>
-    </string-array>
-</resources>
