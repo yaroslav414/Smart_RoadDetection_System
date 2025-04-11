@@ -1,0 +1,1 @@
+1- everytime you access a new network , change the $IP_ADDRESS variable in constants and change the network_security_config

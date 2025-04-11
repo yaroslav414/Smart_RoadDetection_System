@@ -1,0 +1,49 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@drawable/unnamed"
+        android:label="@string/app_name"
+        android:roundIcon="@drawable/unnamed"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.YOLOv8TfLite"
+        tools:targetApi="31"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"/>
+
+        <activity android:name=".MainMenuActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyAR8IhPcJW7ZFi_mdMxrzj3S8ftfxpzfD4"/>
+        <activity android:name=".MapActivity"
+            android:exported="true"/>
+        <receiver
+            android:name=".LocationReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.surendramaran.yolov8tflite.LOCATION_UPDATE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
